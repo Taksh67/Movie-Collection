@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Collection</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="app-container">
+        <header>
+            <h1>Movie Collection</h1>
+        </header>
+
+        <div class="action-bar">
+            <!-- Form for adding new movie -->
+            <div class="add-movie-form">
+                <h2>Add a New Movie</h2>
+                <input type="text" id="movieTitle" placeholder="Title" />
+                <input type="text" id="movieGenre" placeholder="Genre" />
+                <input type="number" id="movieRating" placeholder="Rating" step="0.1" />
+                <input type="number" id="movieReleaseYear" placeholder="Release Year" />
+                <button onclick="addNewMovie()">Add Movie</button>
+            </div>
+
+            <!-- Filters and buttons for listing movies -->
+            <div class="filters">
+                <button onclick="listMoviesByGenreUI()">List Movies by Genre</button>
+                <button onclick="findHighestRatedMovieUI()">Highest Rated Movie</button>
+                <button onclick="getMovieTitlesUI()">Movie Titles</button>
+                <button onclick="moviesAfterYearUI()">Movies After Year</button>
+            </div>
+        </div>
+
+        <!-- Movie Cards Section -->
+        <div class="movie-cards-container">
+            <div id="movieCards"></div>
+        </div>
+
+        <!-- Result Section -->
+        <div id="resultSection" class="result-section">
+            <h2>Results</h2>
+            <p id="resultText">Select an action to see results here.</p>
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
